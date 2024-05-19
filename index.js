@@ -37,7 +37,7 @@ app.get('/test-database', async (req, res) => {
         res.json({ currentDate });
     } catch (error) {
         console.error('Error executing query', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Internal Server Error', error });
     }
 });
 
