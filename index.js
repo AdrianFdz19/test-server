@@ -17,12 +17,12 @@ export let pool;
 
 if(isDevServer) {
     pool = new Pool({
-        connectionString: process.env.EXTERNAL_URL,
+        connectionString: process.env.EXTERNAL_DATABASE,
         ssl: true
     });
 } else {
     pool = new Pool({
-        connectionString: process.env.INTERNAL_URL
+        connectionString: process.env.INTERNAL_DATABASE
     });
 };
 
